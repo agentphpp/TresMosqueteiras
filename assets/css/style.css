@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+/* generic styles */
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box; /* Importante para responsividade */
+}
+
+body {
+    overflow-x: hidden; /* Evita rolagem lateral indesejada */
+}
+
+/* menu styles */
+.menu {
+    background-color: #f5ebdc;
+    display: flex;
+    flex-direction: column; /* Padrão mobile: coluna */
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Ajuste do Logo */
+.menu__logo {
+    height: auto;
+    width: auto;
+    position: relative; /* Mudado de absolute para fluir melhor */
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.menu__logo img {
+    height: 100px; /* Reduzido levemente para mobile */
+    width: auto;
+}
+
+/* Links do menu */
+.menu__links {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    justify-content: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+.menu__links__items {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    padding: 5px 10px;
+    font-size: 18px; /* Tamanho base */
+    color: #502314;
+    text-align: center;
+}
+
+.menu__links__items:hover {
+    text-decoration: none;
+    color: #d62300;
+}
+
+/* VERSÃO DESKTOP DO MENU (Telas grandes) */
+@media (min-width: 992px) {
+    .menu {
+        flex-direction: row; /* Volta a ser linha */
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 120px; /* Altura fixa apenas no desktop */
+    }
+
+    .menu__logo {
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        margin: 0;
+    }
+
+    .menu__links {
+        margin-left: auto; /* Empurra links para a direita */
+    }
+    
+    .menu__links__items {
+        font-size: 22px;
+        padding: 5px 20px;
+    }
+}
+
+/* carousel style */
+.carousel {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    margin: 5px !important;
+    background-color: #fff;
+}
+
+/* Botões do Carrossel - Centralização Inteligente */
+.carousel__btn {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end; /* Joga para baixo */
+    padding-bottom: 60px; /* Distância do fundo */
+    pointer-events: none; /* Permite clicar através da área vazia */
+}
+
+.carousel__btn button {
+    pointer-events: auto; /* Reativa o clique no botão */
+    background-color: #f5ebdc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #0e0d0d;
+    font-size: 1rem;
+    padding: 10px 40px;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.carousel__btn button:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .carousel__btn button {
+        font-size: 1.3rem;
+        padding: 15px 70px;
+        padding-bottom: 20px;
+    }
+}
+
+/* App stores section styles */
+.app__store {
+    display: flex;
+    flex-direction: column-reverse; /* Imagem embaixo, texto em cima no mobile */
+    background-color: #502314;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.app__store_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.app__store_items_title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #f5ebdc;
+    font-size: 2rem; /* Fonte menor no mobile */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.app__store_items_img {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app__store_items_img_item {
+    height: 50px; /* Menor no mobile */
+    width: auto;
+}
+
+.app__store_img {
+    height: auto;
+    width: 80%; /* Responsivo */
+    max-width: 400px;
+}
+
+/* VERSÃO DESKTOP DO APP STORE */
+@media (min-width: 992px) {
+    .app__store {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    .app__store_items {
+        align-items: flex-end;
+        padding-right: 60px;
+        width: 60%;
+        text-align: right;
+    }
+
+    .app__store_items_title {
+        font-size: 4rem;
+        width: 80%;
+    }
+
+    .app__store_items_img_item {
+        height: 80px;
+    }
+
+    .app__store_img {
+        width: auto;
+        height: 400px;
+        margin-left: 50px;
+        align-self: flex-end;
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #502314;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer__logo {
+    height: 85px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.bg-light {
+    width: 96%;
+}
+
+hr.bg-light {
+    margin: 30px auto;
+    border-top: 1px solid lightgrey;
+    opacity: 0.3;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linha */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer__links__items,
+.footer__links__items_second {
+    color: #f5ebdc;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.footer__links__items {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.footer__links__items_second {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.footer__links__items:hover,
+.footer__links__items_second:hover {
+    color: #d62300;
+    text-decoration: none;
+}
+
+.footer__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: #f5ebdc;
+    margin-top: 20px;
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.footer_icons_items {
+    width: 32px;
+    height: 32px;
+}
+
+.footer_text {
+    color: #f5ebdc;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
