@@ -191,7 +191,15 @@ body {
     width: 80%; /* Responsivo */
     max-width: 400px;
 }
-
+.card{
+    transition: 0.2s;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card img{
+    border-radius: 10px;
+}
 /* VERSÃO DESKTOP DO APP STORE */
 @media (min-width: 992px) {
     .app__store {
