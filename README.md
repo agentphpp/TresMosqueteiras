@@ -1,14 +1,14 @@
-<h1 align="center"><a href="#" alt="site clone do burger king"> BURGER KING CLONE 🍔  </a></h1>
+<h1 align="center"><a href="#" alt="site clone do burger king"> BURGER KING CLONE 🍔 PARA 3MOSQUETEIRAS  </a></h1>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/anafts/Burger-King-clone?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/anafts/Burger-King-clone?style=for-the-badge)
 
 ![127 0 0 1_5500_ (1)](https://user-images.githubusercontent.com/106173948/192050137-c91ce910-b7d1-422d-b959-6f4675caac62.png)
 
-<br><h4 align="center"> 🟡 Status do projeto: Em andamento  </h4> <br>
+<br><h4 align="center">  Status do projeto: finalizado  </h4> <br>
 
 ## 💻 Descrição do projeto 
- Clone da página oficial da Burguer King com alterações na fonte, utilizando a mais similar que encontrei. 
+ Clone da página oficial da Burguer King com alterações, projeto para apresentação para escola de Ensino Medio
 
  O clone também contém o navbar visível quando usar o scroll up
  
